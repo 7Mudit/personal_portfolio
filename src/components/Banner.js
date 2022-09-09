@@ -9,7 +9,7 @@ import TrackVisibility from 'react-on-screen';
 export const Banner = () => {
     const [loopNum,setLoopNum]=useState(0)
     const [isDeleting,setIsDeleting]=useState(false)
-    const toRotate=["Web Developer","Web Designer", "UI/UX Designer"]
+    const toRotate=["Web Developer","Web Designer", "UI/UX Designer","Android Developer"]
     const [text,setText]=useState('')
     //it determines how fast one letter comes after the other not more than 300
     const [delta,setDelta]=useState(300-Math.random()*100)
@@ -62,7 +62,7 @@ export const Banner = () => {
                     <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
                         <span className='tagline'>Welcome To My Portfolio</span>
                         <h1>{`Hi I am  Mudit Kapoor `}<span className='wrap'> {text}</span></h1>
-                        <p>Hi, My name is Mudit Kapoor .I am a student at Chandigarh University and I am not a terrorist</p>
+                        <p>Hi, My name is Mudit Kapoor .I am an undergrad at Chandigarh University and I am an optimist.</p>
                         <button onClick={()=>console.log('connect')}>Let's Connect<ArrowRightCircle size={25}/></button>
                     </div>}
                     </TrackVisibility>

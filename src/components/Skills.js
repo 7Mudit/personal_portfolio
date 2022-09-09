@@ -8,6 +8,9 @@ import 'react-multi-carousel/lib/styles.css';
 // import arrow2 from "../assets/img/arrow2.svg";
 import colorSharp from "../assets/img/color-sharp.png"
 
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
+
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
@@ -35,8 +38,13 @@ export const Skills = () => {
             <div className="row">
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
+                    <TrackVisibility>
+                    {({ isVisible }) =>
+                     <div className={isVisible ? "animate__animated animate__heartBeat": ""}>
                         <h2>Skills</h2>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
+                        </div>}
+                </TrackVisibility>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
                                 <img src={meter1} alt="Image1" />
@@ -52,10 +60,13 @@ export const Skills = () => {
                             </div>
                             <div className="item">
                                 <img src={meter1} alt="Image2" />
-                                <h5>Web Development</h5>
+                                <h5>Logic  Building</h5>
                             </div>
+                            
                         </Carousel>
+                    
                     </div>
+                    
                 </div>
             </div>
         </div>
